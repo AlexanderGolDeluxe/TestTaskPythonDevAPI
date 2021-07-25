@@ -1,0 +1,50 @@
+{% extends "wrapper.html" %}
+
+{% block title %}<title>Форма для оплаты</title>{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="py-5 text-center">
+    <img class="d-block mx-auto mb-4" src="../static/img/codename-alex-logo.jpg" alt="Codename Alex Logo" width="72" height="72">
+    <h1>Форма для оплаты</h1>
+  </div>
+  <form class="needs-validation" method="POST" novalidate="">
+    <div class="row">
+      <div class="col-md-8 mb-3">
+        <input type="hidden" id="shop_id" name="shop_id" value="{{ data['shop_id'] }}">
+        <input type="hidden" id="shop_order_id" name="shop_order_id" value="{{ data['shop_order_id'] }}">
+        <label for="amount">Сумма оплаты</label>
+        <input class="form-control" type="text" id="amount" name="amount" placeholder="12.34" required="">
+        <div class="invalid-feedback">
+          Пожалуйста введите правильную сумму.
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="currency">Валюта оплаты</label>
+        <select class="custom-select d-block w-100" id="currency" name="currency" required="">
+          <option value="">Выберите валюту</option>
+          <option value="EUR">EUR</option>
+          <option value="USD">USD</option>
+          <option value="RUB">RUB</option>
+        </select>
+        <div class="invalid-feedback">
+          Пожалуйста укажите правильную валюту.
+        </div>
+      </div>
+      <div class="col-md-12 mb-3">
+        <label for="description">Описание товара</label>
+        <textarea class="form-control" id="description" name="description"></textarea>
+        <div class="invalid-feedback">
+          Пожалуйста заполните описание товара.
+        </div>
+      </div>
+    </div>
+    <hr class="mb-4">
+    <button class="btn btn-primary btn-lg btn-block" type="submit">Оплатить</button>
+  </form>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script>window.jQuery || document.write('<script src="https://getbootstrap.com/docs/4.6/assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
+<script src="https://getbootstrap.com/docs/4.6/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://getbootstrap.com/docs/4.6/examples/checkout/form-validation.js"></script>
+{% endblock %}

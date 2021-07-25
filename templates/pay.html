@@ -1,0 +1,9 @@
+<form name="form_pay" method="{{ data['method'] }}" action="{{ data['url'] }}" accept-charset="UTF-8">
+  {% for key, value in data['payway_data'].items() %}
+    <input type="hidden" name="{{ key }}" value="{{ value }}">
+  {% endfor %}
+  <input type="submit" hidden>
+</form>
+<script type="text/javascript">
+  window.onload=function(){ document.forms["form_pay"].submit(); }
+</script>
