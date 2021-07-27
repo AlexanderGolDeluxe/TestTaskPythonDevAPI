@@ -5,7 +5,7 @@
 {% block content %}
 <div class="container">
   <div class="py-5 text-center">
-    <img class="d-block mx-auto mb-4" src="../static/img/codename-alex-logo.jpg" alt="Codename Alex Logo" width="72" height="72">
+    <img class="d-block mx-auto mb-4" src="{{ url_for('static', filename='img/codename-alex-logo.jpg') }}" alt="Codename Alex Logo" width="80px" height="80px">
     <h1>Форма для оплаты</h1>
   </div>
   <form class="needs-validation" method="POST" novalidate="">

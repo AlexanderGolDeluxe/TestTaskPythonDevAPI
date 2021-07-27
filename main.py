@@ -1,5 +1,5 @@
 import datetime, hashlib, requests
-from flask import Flask, json, render_template, redirect, request
+from flask import Flask, json, render_template, redirect, url_for, request
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
