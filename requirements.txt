@@ -1,6 +1,6 @@
 Flask==2.0.1
 Flask-SQLAlchemy==2.5.1
-gunicorn==19.7.1
+gunicorn==20.1.0
 Jinja2==3.0.1
-requests==2.25.1
+requests==2.26.0
 SQLAlchemy==1.4.22
